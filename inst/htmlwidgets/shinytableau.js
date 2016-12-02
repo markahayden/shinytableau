@@ -113,6 +113,7 @@ HTMLWidgets.widget({
       },
 
       resize: function(width, height) {
+        viz.setFrameSize(width, height);
       },
 
       // apply a categorical filter

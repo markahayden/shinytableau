@@ -27,6 +27,11 @@ HTMLWidgets.widget({
             activeSheet = workbook.getActiveSheet();
 
             if (HTMLWidgets.shinyMode) {
+
+              Shiny.onInputChange(
+                    elementId + "_loaded",
+                    loaded
+              );
               // listener for selection events
               viz.addEventListener(tableau.TableauEventName.MARKS_SELECTION, function(marksEvent) {
                 marksEvent.getMarksAsync().then(function(marks) {

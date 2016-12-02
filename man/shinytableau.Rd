@@ -39,9 +39,11 @@ loading. These inputs can be wrapped in reactive functions for triggering R code
 after user interactions with the Tableau view such as changing parameters,
 selecting data, or switching tabs. These inputs are prefixed with the
 \code{outputId} of the embedded Tableau object. For example, if the
-\code{outputId} is \code{myviz}, then these three input variables will be generated:
+\code{outputId} is \code{myviz}, then these four input variables will be generated:
 
 \describe{
+  \item{\code{input$myviz_loaded}}{TRUE when the workbook finishes loading.}
+
   \item{\code{input$myviz_parameters}}{returns a data.frame containing
   the parameters available in the workbook and their current values.  Both the
   raw values and formatted values are available, although parameters can only

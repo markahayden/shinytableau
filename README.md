@@ -43,6 +43,8 @@ A variety of workbook actions can also be triggered by the API. The export actio
 
 shinytableau listens for user interactions and triggers changes to shiny inputs. Programmatically changing values will also trigger these events. Three different variables are available and can be referenced or used in reactive functions.  If the tableau object is named `myviz` in shiny, these variables will be available:
 
+`input$myviz_loaded`: a TRUE/FALSE boolean for if the workbook has finished loading
+
 `input$myviz_parameters`: a data.frame containing the parameters available in the workbook and their current raw and formatted values
 
 `input$myviz_selectedMarks`: a data.frame containing the marks currently selected in view. Each row represents a point and the columns describe the fields that identify that point
